@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e0e0;
+}
+
+nav {
+    background-color: #35bd59;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.rightNavSection {
+    padding-left: 3vh;
+}
+
+#navButton {
+    all: unset;
+    cursor: pointer;
+}
+
+#sitcker {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 2vw;
+    cursor: wait;
+}
