@@ -19,6 +19,7 @@ function closeProject() {
     btnClose.addEventListener('click', function () {
         const project = document.getElementById('project');
         project.style.display = 'none';
+        enablingCursor();
     });
 }
 
@@ -40,6 +41,7 @@ function closeMenu() {
     btnClose.addEventListener('click', function () {
         const setting = document.getElementById('setting');
         setting.style.display = 'none';
+        enablingCursor();
     });
 }
 
@@ -51,4 +53,14 @@ function disablingCursor() {
     btnOpenSetting.disabled = true;
     btnOpenProject.style.cursor = 'default';
     btnOpenSetting.style.cursor = 'default';
+}
+
+function enablingCursor() {
+    const btnOpenSetting = document.getElementById('settingButton');
+    const btnOpenProject = document.getElementById('bodyAddingButton');
+
+    btnOpenProject.disabled = false;
+    btnOpenSetting.disabled = false;
+    btnOpenProject.style.cursor = 'pointer';
+    btnOpenSetting.style.cursor = 'pointer';
 }
