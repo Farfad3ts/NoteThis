@@ -1,3 +1,11 @@
+:root{
+--gunmetal: hsla(208, 18%, 21%, 1);
+--bittersweet: hsla(0, 100%, 70%, 1);
+--ivory: hsla(76, 35%, 94%, 1);
+--french-sky-blue: hsla(214, 98%, 77%, 1);
+--forest-green-crayola: hsla(137, 27%, 50%, 1);
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -11,11 +19,170 @@ nav {
     padding: 0px 20px;
 }
 
-.rightNavSection {
+#rightNavSection {
     padding-left: 3vh;
 }
 
-button {
+.navButton {
+    background-color: rgba(145, 223, 129, 0.965);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#bodyAddingButton{
+    height: 25%;
+    width: 10%;
+    background-color: darkgray;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2% 2.5%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 10px 20px;
+    width: 10vw;
+    height: 20vh;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.cards-body{
+    display: flex;
+    background-color: darkorange;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+    align-items: center;
+}
+
+main {
+    height: 93.6vh;
+    width: 100vw;
+    background-color: #d1d0d0;
+}
+
+#project{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 25%;
+    background-color: #92df82f6;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #92df82f6;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#project h3{
+    font-size: 30px;
+}
+
+#project-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    background-color: #92df82f6;
+    font-size: 1.25em;
+}
+
+.project-input{
+    width: 75%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+#project-add-button{
+    background-color: #92df82f6;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#setting{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 60%;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+}
+
+#setting-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #92df82f6;
+    border-radius: 10px 10px;
+}
+
+#setting h3{
+    font-size: 30px;
+}
+#setting-body{
+    height: 80%;
+    width: 100%;
+    font-size: 1.25em;
+}
+
+textarea{
+    resize: none;
+}
+
+#setting-body > label select {
+    width: 75%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+.closeButton{
     background-color: #92df82f6;
     border: none;
     color: black;
@@ -28,28 +195,239 @@ button {
     cursor: pointer;
 }
 
-#navButton {
-    all: unset;
-    cursor: pointer;
-}
-
-#sitcker {
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-main {
-    height: 93.6vh;
-    width: 100vw;
-    background-color: #d1d0d0;
-}
-
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     left: 2vw;
-    cursor: wait;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (max-width: 768px) {
+    #cards-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        width: 80vw;
+        height: 20vh;
+        margin: 10px 0px;
+    }
+    .cards-body{
+        width: 100%;
+        height: 80%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #bodyAddingButton{
+        height: 25%;
+        width: 10%;
+        background-color: darkgray;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2% 2.5%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #project{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60%;
+        width: 80%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+        display: none;
+        }
+    #setting{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 50%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cards-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        width: 80vw;
+        height: 20vh;
+        margin: 10px 0px;
+    }
+    .cards-body{
+        width: 100%;
+        height: 80%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #bodyAddingButton{
+        height: 25%;
+        width: 10%;
+        background-color: darkgray;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2% 2.5%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #project{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60%;
+        width: 80%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+        display: none;
+        }
+    #setting{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 50%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #cards-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        width: 80vw;
+        height: 20vh;
+        margin: 10px 0px;
+    }
+    .cards-body{
+        width: 100%;
+        height: 80%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #bodyAddingButton{
+        height: 25%;
+        width: 10%;
+        background-color: darkgray;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2% 2.5%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #project{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60%;
+        width: 80%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+        display: none;
+        }
+    #setting{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 50%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #cards-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        width: 80vw;
+        height: 20vh;
+        margin: 10px 0px;
+    }
+    .cards-body{
+        width: 100%;
+        height: 80%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #bodyAddingButton{
+        height: 25%;
+        width: 10%;
+        background-color: darkgray;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2% 2.5%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #project{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 60%;
+        width: 80%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+        display: none;
+        }
+    #setting{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 50%;
+        background-color: #92df82f6;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.7);
+    }
 }
