@@ -23,11 +23,7 @@
                 <i>Acceuil</i>
             </div>
             <div id="rightNavSection">
-                Ajouter un projet
-                <button class="navButton" id="addingButton" onclick="addProject()">
-                    <i class="fa-sharp fa-solid fa-plus"></i>
-                </button>
-                <button class="navButton" id="settingButton">
+                <button class="navButton" id="settingButton" title="Settings" onclick="openSetting()">
                     <i class="fa-solid fa-gears"></i>
                 </button>
             </div>
@@ -35,16 +31,44 @@
     </header>
 
     <main id="mainContent">
-        <div class="cards">
-            <div class="cards-header"></div>
-            <div class="cards-body"></div>
-        </div>
+        <button id="bodyAddingButton" title="Add a project" onclick="openProjet()">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+        </button>
+        <section id="setting">
+            <div id="setting-header">
+                <h3 id="settingTitle">Settings</h3>
+                <button class="closeButton" title="Close" id="closeButtonSettings" onclick="closeMenu()">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div id="setting-body">
+                <label for="theme">Theme</label>
+                <input type="checkbox" name="theme" id="">
+    
+                <label for="font">Font</label>
+                <select name="font" id="font">
+                    <option value="sansita">Sansita</option>
+                    <option value="ubuntu">Ubuntu</option>
+                </select>
+            </div>
+        </section>
+        <section id="project">
+            <div id="project-header">
+                <h3 id="projectTitle">Projects</h3>
+                <button class="closeButton" title="Close" id="closeButtonProject" onclick="closeProject()">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div id="project-body">
+                <label for="project-name">Name of your project</label>
+                <input type="text" name="project-name" class="project-input" id="project-name" placeholder="Project name">
+                <label for="project-description">Description</label>
+                <textarea name="project-description" class="project-input" id="project-description" cols="30" rows="10"
+                    placeholder="Project description" style="height : 62.723% !important;"></textarea>
+                <button id="project-add-button" title="Add the project" onclick="addProject()">Add</button>
+            </div>
 
-        <!-- <div class="sticker">
-            <div id="sticker-header"></div>
-            <div id="sticker-body"></div>
-        </div> -->
-
+        </section>
     </main>
     <footer>
         <p>© 2022 Note This! - Tous droits réservés</p>
