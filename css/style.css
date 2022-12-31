@@ -173,14 +173,17 @@ textarea{
     resize: none;
 }
 
-#setting-body > label select {
-    width: 75%;
-    height: 5%;
-    border-radius: 10px;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0px;
+#setting-input::after{
+        content: 'OFF';
+        color: #000;
+        position: absolute;
+        right: 10px;
+        z-index: 0;      
 }
+
+
+/*Make the 2 first elements in setting body on the same line and put the 2 other element on another line*/
+
 
 .closeButton{
     background-color: #92df82f6;
