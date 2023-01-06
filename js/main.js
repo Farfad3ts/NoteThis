@@ -1,5 +1,3 @@
-const body = document.querySelector('body');
-
 //Open the project menu
 function openProjet() {
     const project = document.getElementById('project');
