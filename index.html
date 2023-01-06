@@ -16,24 +16,25 @@
 <body>
     <header>
         <nav>
-            <div id="leftNavSection">
-                <h3><i>Note This!</i></h3>
-            </div>
-            <div id="middleNavSection">
-                <i>Acceuil</i>
-            </div>
-            <div id="rightNavSection">
-                <button class="navButton" id="settingButton" title="Settings" onclick="openSetting()">
-                    <i class="fa-solid fa-gears"></i>
-                </button>
-            </div>
+            <h3><i>Note This!</i></h3>
+            <i>Acceuil</i>
+            <button class="navButton" id="settingButton" title="Settings" onclick="openSetting()">
+                <i class="fa-solid fa-gears"></i>
+            </button>
         </nav>
     </header>
 
     <main id="mainContent">
-        <button id="bodyAddingButton" title="Add a project" onclick="openProjet()">
+        <button id="bodyAddingButton" class="cards" title="Add a project" onclick="openProjet()">
             <i class="fa-sharp fa-solid fa-plus"></i>
         </button>
+        <section class="cards"></section>
+        <section class="cards"></section>
+        <section class="cards"></section>
+        <section class="cards"></section>
+        <section class="cards"></section>
+
+        <!--Hidden section-->
         <section id="setting">
             <div id="setting-header">
                 <h3 id="settingTitle">Settings</h3>
@@ -55,7 +56,8 @@
             </div>
             <div id="project-body">
                 <label for="project-name">Name of your project</label>
-                <input type="text" name="project-name" class="project-input" id="project-name" placeholder="Project name">
+                <input type="text" name="project-name" class="project-input" id="project-name"
+                    placeholder="Project name">
                 <label for="project-description">Description</label>
                 <textarea name="project-description" class="project-input" id="project-description" cols="30" rows="10"
                     placeholder="Project description" style="height : 62.723% !important;"></textarea>
@@ -64,9 +66,7 @@
 
         </section>
     </main>
-    <footer>
-        <p>© 2022 Note This! - Tous droits réservés</p>
-    </footer>
+
     <script src="./js/main.js"></script>
 </body>
 
